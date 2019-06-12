@@ -1,0 +1,41 @@
+2019-06-03 09:22:05.294 [Thread-21] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2019-06-03 09:22:05.314 [Thread-21] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-03 09:22:55.615 [restartedMain] INFO  com.course.Application - Starting Application on DESKTOP-NRG4275 with PID 15264 (C:\Users\DELL\Desktop\go_test\target\classes started by DELL in C:\Users\DELL\Desktop\go_test)
+2019-06-03 09:22:55.617 [restartedMain] INFO  com.course.Application - No active profile set, falling back to default profiles: default
+2019-06-03 09:22:55.672 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-06-03 09:22:55.673 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-06-03 09:22:56.377 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.course]' package. Please check your configuration.
+2019-06-03 09:22:57.544 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-06-03 09:22:57.577 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-06-03 09:22:57.577 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-03 09:22:57.702 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-06-03 09:22:57.703 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2027 ms
+2019-06-03 09:22:58.246 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-03 09:22:58.434 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-06-03 09:22:58.534 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-06-03 09:22:58.611 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-06-03 09:22:58.685 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-03 09:22:58.693 [restartedMain] INFO  com.course.Application - Started Application in 3.549 seconds (JVM running for 5.368)
+2019-06-03 09:23:03.908 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-03 09:23:03.908 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-06-03 09:23:03.921 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-06-03 10:02:00.401 [Thread-6] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2019-06-03 10:02:00.404 [Thread-6] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-03 10:02:00.767 [restartedMain] INFO  com.course.Application - Starting Application on DESKTOP-NRG4275 with PID 15264 (C:\Users\DELL\Desktop\go_test\target\classes started by DELL in C:\Users\DELL\Desktop\go_test)
+2019-06-03 10:02:00.768 [restartedMain] INFO  com.course.Application - No active profile set, falling back to default profiles: default
+2019-06-03 10:02:01.036 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.course]' package. Please check your configuration.
+2019-06-03 10:02:01.214 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-06-03 10:02:01.216 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-06-03 10:02:01.217 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-03 10:02:01.233 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-06-03 10:02:01.234 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 463 ms
+2019-06-03 10:02:01.356 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-03 10:02:01.421 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2019-06-03 10:02:01.464 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-06-03 10:02:01.502 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-06-03 10:02:01.530 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-03 10:02:01.531 [restartedMain] INFO  com.course.Application - Started Application in 0.819 seconds (JVM running for 2348.207)
+2019-06-03 10:02:01.535 [restartedMain] INFO  o.s.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2019-06-03 10:57:52.887 [http-nio-8080-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-03 10:57:52.892 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-06-03 10:57:52.921 [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 29 ms

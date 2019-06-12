@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style>
+.icss1{
+    width: 100%;
+    height: 100%;
+	z-Index:1;
+	position:absolute;
+	margin: 0;
+	font-size: 0px;
+}
+.icss2{
+    width: 100%;
+    height: 100%;
+	z-Index:-1;
+	position:absolute;
+	margin: 0;
+	font-size: 0px;
+}
+html,
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }/*这里是关键*/
+            
+            #layout {
+                background-color: transparent;
+                margin: 0 auto;
+                width: 100%;
+                height: 100%;
+				position:absolute;
+            }
+</style>
+<script type="text/javascript">
+$(function(){
+if($("#left").height() > $("#right").height()){
+$("#right").css("height",$("#left").height()) 
+}else{
+$("#left").css("height",$("#right").height()) 
+};
+document.getElementById('Auto');
+})
+</script>
+</head>
+<body>
+<!--iframe src="newfile.html" class="icss1" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="yes"-->
+<div id="layout">
+<iframe src="index.html" class="icss2" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowTransparency="true"></iframe>
+</div>
+<div id="layout">
+<iframe src="newfile.html" class="icss1" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" allowTransparency="true"></iframe>
+</div>
+</body>
+</html>

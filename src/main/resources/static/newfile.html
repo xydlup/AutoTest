@@ -1,0 +1,247 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<!--link rel="stylesheet" type="text/css" href="./newfile_files/newfile.css"-->
+<!--样式CSS-->
+<style type="text/css">
+.tabtop13 {
+	margin-top: 13px;
+}
+.tabtop13 td {
+	background-color:#ffffff;
+	height:25px;
+	line-height:150%;
+}
+.font-center {
+	text-align:center
+}
+.btbg {
+	background-color:rgba(175, 238, 238, 0.5) !important;
+}
+.btbg1 {
+	background-color:rgba(255, 255, 255, 0.5) !important;
+}
+.btbg2 {
+	background-color:rgba(211, 211, 211, 0.5) !important;
+}
+.btbg3 {
+	background-color:rgba(255, 239, 219, 0.5) !important;
+}
+.biaoti {
+	font-family: 微软雅黑;
+	font-size: 26px;
+	font-weight: bold;
+	border-bottom:1px dashed #CCCCCC;
+	color: #255e95;
+	background-color: rgba(255, 239, 219, 0.5);
+}
+.titfont {
+	font-family: 微软雅黑;
+	font-size: 16px;
+	font-weight: bold;
+	color: 黑色;
+	background: url() no-repeat 15px center;
+}
+.tabtxt2 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 10px;
+	color:#327cd1;
+}
+.tabtxt3 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+	padding-left: 15px;
+	color: #000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	line-height: 20px;
+}
+.btn1 {
+ background: rgba(118,238,198,0.5);
+	float: right;
+	font-size: 15px;
+}
+.btn {
+ background: rgba(118,238,198,0.5);
+	float: ;
+	font-size: 15px;
+}
+</style>
+<!--显示实时时间-->
+<script type="text/javascript"> 
+window.onload=function(){  
+setInterval(function(){   
+var date=new Date();   
+var year=date.getFullYear(); //获取当前年份   
+var mon=date.getMonth()+1; //获取当前月份   
+var da=date.getDate(); //获取当前日 
+var weekday=["日","一","二","三","四","五","六"];  
+var day=weekday[date.getDay()]; //获取当前星期几   
+var h=date.getHours(); //获取小时
+h=h>9?h:"0"+h;   
+var m=date.getMinutes(); //获取分钟 
+m=m>9?m:"0"+m;  
+var s=date.getSeconds(); //获取秒
+s=s>9?s:"0"+s;  
+var d=document.getElementById('Date');    
+d.innerHTML='当前时间:'+year+'年'+mon+'月'+da+'日'+'星期'+day+' '+h+':'+m+':'+s;  },1000)  }
+function changeEdit()
+{
+var B=document.getElementById('willChange');
+var text=B.innerHTML;
+B.innerHTML='<input value='+text+'></input>';
+}
+</script>
+<script language="javascript" src="templates/js/newfile.js"></script>
+
+<!--控制日期-->
+<script type="text/javascript">
+function _changeMaxOrMin(){
+var value0 = document.getElementById("time_start0").value;
+var value1 = document.getElementById("time_end0").value;
+var value2 = document.getElementById("time_start1").value;
+var value3 = document.getElementById("time_end1").value;
+
+//实现控制起止时间大小问题
+document.getElementById("time_end0").min = value0;
+document.getElementById("time_start0").max = value1;
+document.getElementById("time_end1").min = value2;
+document.getElementById("time_start1").max = value3;
+}
+</script>
+<!--实现加载后台数据-->
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<script>
+$(document).ready(function () {
+$("#btn").click(function () {
+    $.ajax({  
+            type: "Get",  
+            url: "/v1/getUserCount",
+			dataType: "jsonp",			
+            success: function(data){ 
+			var result = JSON.stringify(data);
+            $("#text").val(result); 
+			alert(data);
+            }  
+        });
+		});
+		});
+</script>
+</head>
+<body height="100%">
+<h1 class="biaoti"><a href="http://res.ghzq.cn/download/index_files/rjxz_logo.png"><img src="http://res.ghzq.cn/download/index_files/rjxz_logo.png" alt="图标" width="150" height="35" hspace="1" vspace="0" align="bottom"></a>
+  <button type="button" onClick="myFunction()" class="btn1">一键下载</button>
+</h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tbody>
+    <tr>
+      <td align="center" class="biaoti" height="60">测试简报</td>
+    </tr>
+    <tr>
+      <td align="right" height="25"><div id="Date"></div></td>
+    </tr>
+  </tbody>
+</table>
+<table width="100%" border="1" cellspacing="0" cellpadding="0" class="tabtop13" id="tabProduct">
+  <tbody>
+    <tr>
+      <td colspan="4" rowspan="" class="btbg font-left titfont">一、测试总结</td>
+    </tr>
+    <tr height="100">
+      <td colspan="4" class="btbg1" EditType="TextBox" Name="InText" contentEditable="true"></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="btbg font-left titfont" rowspan="">二、测试环境</td>
+    </tr>
+    <tr>
+      <td colspan="1" class="btbg2 font-center">被测产品版本</td>
+      <td colspan="2" class="btbg2 font-center">硬件配置</td>
+      <td colspan="1" class="btbg2 font-center">软件配置</td>
+    </tr>
+    <tr height="50" id="testtr">
+      <td colspan="1" class="btbg1" contentEditable="true"></td>
+      <td colspan="2" class="btbg1" contentEditable="true"></td>
+      <td colspan="1" class="btbg1" contentEditable="true"></td>
+    </tr>
+    <td colspan="4" class="btbg1">
+	<input type="button" class="btn1" name="Submit" value="删除" onClick="delRow(this)"/>
+    <input type="button" class="btn1" name="Submit" value="新增" onClick="addRow(this)"/>
+    </td>
+    <tr>
+      <td colspan="4" class="btbg font-left titfont" rowspan="">三、测试范围</td>
+    </tr>
+    <tr>
+      <td  class="btbg2 font-center">需求单/BUG单</td>
+      <td  class="btbg2 font-center">标题</td>
+      <td  class="btbg2 font-center">测试人员</td>
+      <td  class="btbg2 font-center">是否退回</td>
+    </tr>
+    <tr height="100" name="notdel" id="testtr">
+      <td colspan="1" class="btbg1" contentEditable="true"></td>
+      <td colspan="1" class="btbg1" contentEditable="true"></td>
+      <td colspan="1" class="btbg1" contentEditable="true"></td>
+	  <td colspan="1" class="btbg1" contentEditable="true"></td>
+    </tr>
+    <td colspan="4" class="btbg1">
+	<input type="button" class="btn1" name="Submit" value="删除" onClick="delRow(this)"/>
+    <input type="button" class="btn1" name="Submit" value="新增" onClick="addRow(this)"/>
+    </td>
+    <tr>
+      <td colspan="4" class="btbg font-left titfont" rowspan="">四、测试用例执行列表</td>
+    </tr>
+	<div>
+	<td colspan="4" class="btbg3">
+			起止时间：    <input type="date" name="time_start" id="time_start0" class="btbg" size="12" title="点击选择" onClick="_changeMaxOrMin()" >
+                    -
+    <input type="date" name="time_end" id="time_end0" class="btbg" size="12" title="点击选择" onClick="_changeMaxOrMin()" >
+	测试单：    <input type="text" name="test_list" id="test_list" class="btbg" size="12" >
+	<input type="button" class="btn" name="Submit" value="搜索" onClick="_click()"/>
+	<input id="btn" type="button" value="跨域获取数据" />
+	<textarea id="text" style="width: 100px; height: 20px;"></textarea>
+    </td>
+	</div>
+	<tr>
+      <td width="25%" class="btbg2 font-center">用例ID</td>
+      <td width="25%" class="btbg2 font-center">用例描述</td>
+      <td width="25%" class="btbg2 font-center">执行人员</td>
+      <td width="25%" class="btbg2 font-center">是否通过</td>
+    </tr>
+    <tr height="100">
+      <td colspan="4" class="btbg1"></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="btbg font-left titfont" rowspan="">五、新增未关闭缺陷列表</td>
+    </tr>
+	<div>
+	<td colspan="4" class="btbg3">
+			起止时间：    <input type="date" name="time_start" id="time_start1" class="btbg" size="12" title="点击选择" onClick="_changeMaxOrMin()">
+                    -
+    <input type="date" name="time_end" id="time_end1" class="btbg" size="12" title="点击选择" onClick="_changeMaxOrMin()">
+	BUG单：    <input type="text" name="bug_list" id="bug_list" class="btbg" size="12" >
+	<input type="button" class="btn" name="Submit" value="搜索" onClick=""/>
+    </td>
+	</div>
+    <tr>
+      <td width="25%" class="btbg2 font-center">用例ID</td>
+      <td width="25%" class="btbg2 font-center">缺陷标题</td>
+      <td width="25%" class="btbg2 font-center">严重等级</td>
+      <td width="25%" class="btbg2 font-center">缺陷状态</td>
+    </tr>
+    <tr height="100">
+      <td colspan="4" class="btbg1"></td>
+    </tr>
+    <tr>
+      <td colspan="4" class="btbg font-left titfont" rowspan="">六、备注</td>
+    </tr>
+    <tr height="100">
+      <td colspan="4" class="btbg1" contentEditable="true"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
